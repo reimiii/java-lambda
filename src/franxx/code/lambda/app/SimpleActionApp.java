@@ -4,19 +4,39 @@ import franxx.code.lambda.SimpleAction;
 
 public class SimpleActionApp {
     public static void main(String[] args) {
-        SimpleAction action = new SimpleAction() {
-            @Override
-            public String action() {
-                return "Hilmi AM";
-            }
+//        SimpleAction action = new SimpleAction() {
+//            @Override
+//            public String action(String name) {
+//                return "Hilmi AM";
+//            }
+//        };
+//
+//        System.out.println(action.action("FranXX"));
+//
+//        SimpleAction simpleAction = (String name) -> {
+//          return "002";
+//        };
+//
+//        System.out.println(simpleAction.action("FranXX"));
+
+        SimpleAction simpleAction = (String value) -> {
+            return "Hello " + value;
         };
 
-        System.out.println(action.action());
-
-        SimpleAction simpleAction = () -> {
-          return "002";
+        SimpleAction action = (v) -> {
+            return "FranXX " + v;
         };
 
-        System.out.println(simpleAction.action());
+        SimpleAction action1 = (name) -> {
+            return "FranXX " + name;
+        };
+
+        SimpleAction simpleAction1 = (String name) -> "Hello " + name;
+
+        SimpleAction simpleAction2 = (name) -> "Hello " + name;
+
+        SimpleAction simpleAction3 = name -> "Hello " + name;
+
+
     }
 }
